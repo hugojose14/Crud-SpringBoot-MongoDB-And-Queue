@@ -1,0 +1,15 @@
+server:
+  port: ${NUMBER_PORT}
+spring:
+  autoconfigure:
+    exclude: ${NUMBER_EXCLUDE}
+  data:
+    mongodb:
+      uri: ${LINK_URI}
+  activemq:
+    broker-url: ${BROKEN_URL}
+    user: ${USER}
+    password: ${PASSWORD}  
+message:
+  outbound:
+    hugoWithoutJMQueue: ${NAME_QUEUE}
