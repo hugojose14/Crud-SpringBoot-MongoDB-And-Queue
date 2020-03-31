@@ -1,4 +1,7 @@
 package com.bolsaideas.springboot.web.app.domain.dto;
+
+import java.time.LocalDate;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -10,11 +13,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class HugoDto {
-
+public class CredentialsDto {
+	
 	private String id;
-	private String nombre;
-	private String apellido;
-	private Integer cedula;
-	private String correo;
+    private String nit;
+    private String regimen;
+    private String token;
+    private LocalDate tokenDate;
+    private String user;
+	
 }

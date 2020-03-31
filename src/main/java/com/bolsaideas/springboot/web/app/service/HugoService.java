@@ -1,22 +1,28 @@
 package com.bolsaideas.springboot.web.app.service;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
 
+import com.bolsaideas.springboot.web.app.domain.dto.HugoDto;
 import com.bolsaideas.springboot.web.app.domain.model.Hugo;
 
 public interface HugoService {
+		
+	public List<HugoDto> findAll();
 	
-	public Hugo save(Hugo hugo);
-	
-	public List<Hugo> findAll();
-	
-	public Optional<Hugo> findById(String idHugo);
+	public HugoDto findById(String idHugo);
 	
 	public void delete(String idHugo);
 	
-	public Hugo update(Hugo hugo);
+	public Hugo update(HugoDto hugo);
 
-	void publishDeviceHugo(Hugo hugo);
+	public void publishDeviceHugo(HugoDto hugo);
+
+	public Hugo save(HugoDto hugo);
+	
+	public Map<String,Integer> saveProfessionalBoard(String nit, String regimen,String noPrescription);
+	
+	boolean existsByNoPrescription(String noPrescription);
+
 	
 }

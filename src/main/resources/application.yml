@@ -1,15 +1,18 @@
-server:
-  port: ${NUMBER_PORT}
+Server:
+  port: ${PORT}
 spring:
   autoconfigure:
-    exclude: ${NUMBER_EXCLUDE}
+    exclude: ${EXCLUDE}
   data:
     mongodb:
-      uri: ${LINK_URI}
+      uri:  ${URI}
   activemq:
-    broker-url: ${BROKEN_URL}
+    broker-url: $BROKEN_URI}
     user: ${USER}
     password: ${PASSWORD}  
 message:
   outbound:
-    hugoWithoutJMQueue: ${NAME_QUEUE}
+    hugoWithoutJMQueue: ${QUEUE}
+mipres:
+  default:
+    juntaMedicaUrl: ${JUNTAMEDICAURL}
